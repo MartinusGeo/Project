@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-11-07T13:15:53.730Z",
+    "end": "2026-11-07T13:15:55.308Z",
+    "duration": 1578,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "78d97488-4de6-4000-870a-80b928c81419",
+      "title": "",
+      "fullFile": "C:\\Users\\geova\\Course ISTQB\\Web UI Auto\\test\\google.js",
+      "file": "\\test\\google.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8753ada9-7990-45a5-accf-10151c7df513",
+          "title": "Open Google",
+          "fullFile": "C:\\Users\\geova\\Course ISTQB\\Web UI Auto\\test\\google.js",
+          "file": "\\test\\google.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should Open Google",
+              "fullTitle": "Open Google Should Open Google",
+              "timedOut": false,
+              "duration": 1566,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const driver = await new Builder().forBrowser('chrome').build();\nawait driver.get(\"https://www.saucedemo.com/\");\nlet username = await driver.findElement({id: \"user-name\"});\nawait username.click();\nawait username.sendKeys(\"standard_user\");\n\nlet password = await driver.findElement({id: \"password\"});\nawait password.click();\nawait password.sendKeys(\"secret_sauce\");\nlet loginButton = await driver.findElement({id: \"login-button\"});\nawait loginButton.click();\nlet title = await driver.getTitle();\nconsole.log(\"Title: \" + title);\nassert.strictEqual(title, \"Swag Labs\");\nlet appLogo = await driver.findElement(By.xpath(\"//div[@class='app_logo']\"));\nawait appLogo.isDisplayed();\n\n    \nawait driver.quit();",
+              "err": {},
+              "uuid": "e780c412-a1a5-48e8-8965-d39e69dce0f6",
+              "parentUUID": "8753ada9-7990-45a5-accf-10151c7df513",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e780c412-a1a5-48e8-8965-d39e69dce0f6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1566,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 20000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 20000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.8.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "8.1.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.3.2"
+    }
+  }
+}
